@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "bAvyFpbp+Uk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\aisha.hersi\\source\\repos\\CsvReaderApp\\CsvReaderApp\\CsvReaderApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aisha.hersi\\.nuget\\packages\\csvhelper\\33.1.0\\csvhelper.33.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
