@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using CsvReaderApp.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CsvReaderApp.Controllers
@@ -15,7 +16,27 @@ namespace CsvReaderApp.Controllers
 
         public IActionResult Index()
         {
+            var model = new User
+            {
+                Username = "",
+                Password = ""
+            };
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Login(User model)
+        {
+            if (model.Username == "Admin" && model.Password == "Password")
+            {
+                return RedirectToAction("CsvImport", "CsvImporter");
+            }
+            else
+            {
+                ModelState.AddModelError(string.Empty, "Invalid username or password.");
+            }
+
+            return View("Index");
         }
 
         public IActionResult Privacy()

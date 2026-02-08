@@ -13,14 +13,14 @@ namespace CsvReaderApp.Controllers
             _csvService = csvService;
         }
         [HttpGet("")]
-        [HttpGet("Index")]
-        public IActionResult Index()
+        [HttpGet("CsvImport")]
+        public IActionResult CsvImport()
         {
             return View(new List<User>());
         }
         [HttpPost("")]
-        [HttpPost("Index")]
-        public IActionResult Index(IFormFile csvFile)
+        [HttpPost("CsvImport")]
+        public IActionResult CsvImport(IFormFile csvFile)
         {
             if (csvFile != null && csvFile.Length > 0)
             {
